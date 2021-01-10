@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/3sum-smaller/
 
+from typing import List
 class Solution:
     def threeSumSmaller(self, nums: List[int], target: int) -> int:
         nums.sort()
@@ -18,3 +19,7 @@ class Solution:
             else:
                 right -= 1
         return count
+
+# Time complexity: $O(n^2)$ since threeSumSmaller calls twoSumSmaller `n` times, and twoSumSmaller is
+# $O(n)$ since both left and right traverse at most `n` steps.
+# Space complexity: $O(1)$.
